@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Tips - Clim8</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tips-section {
+            padding: 120px 20px 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tips-category {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .tips-category h2 {
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .tip-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .tip-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-level {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .high-impact {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .medium-impact {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .low-impact {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .category-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-button:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Clim8</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#calculator">Calculator</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tips-section">
+        <div class="tips-category">
+            <h2>Transportation Tips</h2>
+            <p class="category-intro">Reduce your carbon footprint by making smarter transportation choices.</p>
+            
+            <div class="tip-card">
+                <h3>Use Public Transportation</h3>
+                <p>Take buses, trains, or subways instead of driving. Public transport can reduce your carbon footprint by up to 75% compared to driving alone.</p>
+                <span class="impact-level high-impact">High Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Carpooling</h3>
+                <p>Share rides with colleagues or friends. Carpooling with just one other person can cut your transportation emissions in half.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Bike or Walk</h3>
+                <p>For short distances, consider biking or walking. It's not only eco-friendly but also great for your health.</p>
+                <span class="impact-level high-impact">High Impact</span>
+            </div>
+        </div>
+
+        <div class="tips-category">
+            <h2>Energy Usage Tips</h2>
+            <p class="category-intro">Make your home more energy-efficient and reduce your carbon footprint.</p>
+
+            <div class="tip-card">
+                <h3>Switch to LED Bulbs</h3>
+                <p>Replace traditional bulbs with LED lights. They use up to 90% less energy and last much longer.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Smart Thermostat</h3>
+                <p>Install a programmable thermostat to optimize your heating and cooling. Each degree adjusted can save up to 3% on energy costs.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Unplug Electronics</h3>
+                <p>Unplug devices when not in use. Standby power can account for up to 10% of your electricity bill.</p>
+                <span class="impact-level low-impact">Low Impact</span>
+            </div>
+        </div>
+
+        <div class="tips-category">
+            <h2>Diet and Food Tips</h2>
+            <p class="category-intro">Make sustainable food choices to reduce your environmental impact.</p>
+
+            <div class="tip-card">
+                <h3>Reduce Meat Consumption</h3>
+                <p>Try having meat-free days. Each meat-free meal can save up to 2.5 kg of CO2 and 1000 liters of water.</p>
+                <span class="impact-level high-impact">High Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Buy Local and Seasonal</h3>
+                <p>Choose locally grown, seasonal produce to reduce transportation emissions and support local farmers.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Reduce Food Waste</h3>
+                <p>Plan meals, store food properly, and compost food scraps. Food waste contributes to 8% of global greenhouse gas emissions.</p>
+                <span class="impact-level high-impact">High Impact</span>
+            </div>
+        </div>
+
+        <div class="tips-category">
+            <h2>Water Conservation Tips</h2>
+            <p class="category-intro">Save water and reduce your water footprint with these simple tips.</p>
+
+            <div class="tip-card">
+                <h3>Fix Leaks</h3>
+                <p>A dripping faucet can waste up to 20 gallons of water per day. Fix leaks promptly to save water and money.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Water-Efficient Appliances</h3>
+                <p>Install water-saving showerheads and faucets. They can reduce water usage by up to 50%.</p>
+                <span class="impact-level medium-impact">Medium Impact</span>
+            </div>
+
+            <div class="tip-card">
+                <h3>Smart Water Habits</h3>
+                <p>Turn off the tap while brushing teeth, take shorter showers, and only run full loads in the dishwasher and washing machine.</p>
+                <span class="impact-level low-impact">Low Impact</span>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">Back to Calculator</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Clim8 - Your Eco Habits Upgraded</p>
+    </footer>
+
+    <script>
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeIcon = document.querySelector('.theme-icon');
+            if (themeIcon) {
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            
+            // Add event listener to theme toggle button
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
+</body>
+</html> 

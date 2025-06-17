@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clim8 - Your Eco Habits Upgraded</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Clim8</a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="#calculator">Calculator</a>
+                <a href="tips.html">Tips</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Clim8</h1>
+            <p>Calculate your environmental impact and discover ways to make a difference</p>
+            <a href="#calculator" class="cta-button">Start Calculating</a>
+        </section>
+
+        <section id="calculator" class="hidden">
+            <h2>Calculate Your Footprint</h2>
+            <form id="footprint-form">
+                <div class="form-section">
+                    <h3>Transportation</h3>
+                    <div class="input-group">
+                        <label for="car-distance">Monthly kilometers driven by car:</label>
+                        <input type="number" id="car-distance" name="car-distance" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="public-transport">Monthly kilometers by public transport:</label>
+                        <input type="number" id="public-transport" name="public-transport" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Energy Usage</h3>
+                    <div class="input-group">
+                        <label for="electricity">Monthly electricity usage (kWh):</label>
+                        <input type="number" id="electricity" name="electricity" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="gas">Monthly gas usage (m³):</label>
+                        <input type="number" id="gas" name="gas" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Diet</h3>
+                    <div class="input-group">
+                        <label for="meat-meals">Weekly meat-based meals:</label>
+                        <input type="number" id="meat-meals" name="meat-meals" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="dairy-products">Weekly dairy products consumed:</label>
+                        <input type="number" id="dairy-products" name="dairy-products" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Water Usage</h3>
+                    <div class="input-group">
+                        <label for="water-usage">Daily water usage (liters):</label>
+                        <input type="number" id="water-usage" name="water-usage" min="0" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Calculate My Footprint</button>
+            </form>
+        </section>
+
+        <section id="results" class="hidden">
+            <h2>Your Environmental Impact</h2>
+            <div class="results-container">
+                <div class="chart-container">
+                    <h3>Carbon Footprint</h3>
+                    <canvas id="carbon-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Carbon Footprint Breakdown</h3>
+                    <canvas id="carbon-pie-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Water Footprint</h3>
+                    <canvas id="water-chart"></canvas>
+                </div>
+            </div>
+            <div class="impact-summary">
+                <h3>Your Main Impact Areas</h3>
+                <div id="impact-areas"></div>
+            </div>
+            <div class="tips-section">
+                <h3>Personalized Tips</h3>
+                <div id="personalized-tips"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Clim8 - Your Eco Habits Upgraded</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

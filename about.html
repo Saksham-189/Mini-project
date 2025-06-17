@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Clim8 - Your Eco Habits Upgraded</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-section {
+            padding: 120px 20px 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mission-statement {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .mission-statement h2 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .team-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            color: var(--dark-green);
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-button:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Clim8</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#calculator">Calculator</a>
+                <a href="index.html#tips">Tips</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-section">
+        <div class="mission-statement">
+            <h2>Our Mission</h2>
+            <p>At Clim8, we're dedicated to empowering individuals to make a positive impact on our planet. We believe that small changes in daily habits can lead to significant environmental improvements. Our goal is to make environmental awareness accessible, actionable, and engaging for everyone.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Accurate Calculations</h3>
+                <p>Our carbon and water footprint calculator uses scientifically validated conversion factors to provide accurate environmental impact assessments.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Personalized Insights</h3>
+                <p>Get customized recommendations based on your specific lifestyle and consumption patterns to reduce your environmental impact.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Educational Resources</h3>
+                <p>Learn about environmental impact through our comprehensive guides and tips for sustainable living.</p>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2>Why We Created Clim8</h2>
+            <p>Climate change and water scarcity are among the most pressing challenges of our time. We created Clim8 to help individuals understand their environmental impact and take meaningful action. By making environmental awareness more accessible and actionable, we hope to inspire positive change in communities worldwide.</p>
+            <p>Our platform combines scientific accuracy with user-friendly design to make environmental impact assessment accessible to everyone. We believe that informed individuals can make better choices, and better choices lead to a healthier planet.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">Back to Calculator</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Clim8 - Your Eco Habits Upgraded</p>
+    </footer>
+
+    <script>
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeIcon = document.querySelector('.theme-icon');
+            if (themeIcon) {
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            
+            // Add event listener to theme toggle button
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
+</body>
+</html> 
