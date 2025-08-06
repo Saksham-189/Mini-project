@@ -44,19 +44,19 @@ const CARBON_FACTORS = {
 
 const WATER_FACTORS = {
     dailyUsage: 1, // liters per liter
-    meatMeal: 1000, // liters per meal
+    meatMeal: 100, // liters per meal
     dairyProduct: 200 // liters per product
 };
 
 // Global averages and safe limits
 const GLOBAL_AVERAGES = {
-    carbon: 4000, // kg CO2 per month
-    water: 3000 // liters per month
+    carbon: 600, // kg CO2 per month
+    water: 9000 // liters per month
 };
 
 const SAFE_LIMITS = {
-    carbon: 2000, // kg CO2 per month
-    water: 2000 // liters per month
+    carbon: 200, // kg CO2 per month
+    water: 8000 // liters per month
 };
 
 // Chart instances
